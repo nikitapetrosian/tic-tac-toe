@@ -145,10 +145,16 @@ function checkWin(arr) {
             end(res);
         }, 500)
     }
+    else {
+        setTimeout(function () {
+            alert('ничья,сыгаем еще?')
+            onload()
+        }, 500)
+    }
 }
 
 function end(res) {
-    res.win ? alert(` Победил ${res.win}`) : alert('ничья,сыгаем еще?')
+    alert(` Победил ${res.win}`)
     onload()
 }
 
