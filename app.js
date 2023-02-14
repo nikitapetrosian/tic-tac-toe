@@ -97,7 +97,10 @@ function auto(arr) {
     const rnd = getRandomInt(arr.length)
     let el = arr[rnd]
     if (!checkFree(arr)) {
-        console.log('full');
+        setTimeout(function () {
+            alert('ничья,сыгаем еще?')
+            onload()
+        }, 500)
     }
     else {
         if (!el.hasChildNodes()) {
